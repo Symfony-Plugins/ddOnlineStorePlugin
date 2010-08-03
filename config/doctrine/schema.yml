@@ -1,0 +1,8 @@
+ProductCategory:
+  actAs:                  
+    NestedSet:            { hasManyRoots: true, rootColumnName: root_id }
+    Sluggable:            { unique: true, fields: [name], canUpdate: true }
+  columns:
+    id:                   { type: integer(4), primary: true, autoincrement: true }
+    name:                 { type: string(255), notnull: true }
+    description:          { type: clob }

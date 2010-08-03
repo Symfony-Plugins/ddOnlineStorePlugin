@@ -1,0 +1,8 @@
+= ddOnlineStorePlugin =
+
+This plugin provide models, modules, and other features to manage a real online store. 
+
+== Entities in this plugin ==
+
+* Categories
+* Products

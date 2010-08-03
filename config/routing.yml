@@ -1,0 +1,8 @@
+online_store_admin_category:
+  class:                  sfDoctrineRouteCollection
+  options:
+    model:                ProductCategory
+    module:               ddOnlineStoreAdminCategory
+    prefix_path:          /category
+    column:               id
+    with_wildcard_routes: true

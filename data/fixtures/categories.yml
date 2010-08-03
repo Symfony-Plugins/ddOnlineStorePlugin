@@ -1,0 +1,40 @@
+ProductCategory:
+  apple:
+    name:        "Apple Products"
+    children:    
+      macbook:
+        name:      "Mackbook"
+      ipod:
+        name:      "iPod"
+      iPhone:
+        name:      "iPhone"
+        
+  laptop_accesory:
+    name:        "Laptop Accesory"
+    children:
+      laptop_cases:
+        name:      "Laptop Cases"
+        
+  cellphone_accesory:
+    name:        "Cellphone Accesory"
+    children:
+      cellphone_cases:
+        name:      "Cellphone Cases"
+        
+  pen_drive:
+    name:        "Pen Drive"
+    
+  pc_parts:
+    name:        "PC Parts"
+    
+  electronic:
+    name:        "Electronic"
+    
+  networking:
+    name:        "Networking"
+    
+  gaming:
+    name:        "Gaming"
+    
+  camera_accesory:
+    name:        "Camera Accesory"
