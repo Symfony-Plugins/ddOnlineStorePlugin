@@ -15,8 +15,10 @@ generator:
       actions: ~
       fields:  ~
       list:    
+        title:             "Product Categories list"
         display:           [ name ]
-      filter:  ~
+      filter:
+        class:             false
       form:    ~
       edit:    ~
       new:     ~
