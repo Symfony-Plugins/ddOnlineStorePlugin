@@ -14,12 +14,22 @@ generator:
     config:
       actions: ~
       fields:  ~
+      
       list:    
         title:             "Product Categories list"
         display:           [ name ]
         table_method:      addFetchRootsInQuery
+        object_actions:
+          _edit:           ~
+          manage_tree:     
+            label:         "Manage tree"
+            params:        { class: "manage_tree" }
+            action:        "manageTree"
+          _delete:         ~
+          
       filter:
         class:             false
+        
       form:    ~
       edit:    ~
       new:     ~

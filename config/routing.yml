@@ -8,5 +8,5 @@ online_store_admin_category:
     with_wildcard_routes: true
 
 online_store_admin_category_manage_tree:
-  url:                    /category/manage-tree/:root
+  url:                    /category/:root/manage-tree
   param:                  { module: ddOnlineStoreAdminCategory, action: manageTree }
