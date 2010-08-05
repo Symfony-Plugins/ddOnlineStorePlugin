@@ -1,4 +1,4 @@
 all:
   sfJqueryTree:
     route_back:       online_store_admin_category
-    route_edit_auto:  true
+    route_edit:       online_store_admin_category_edit
