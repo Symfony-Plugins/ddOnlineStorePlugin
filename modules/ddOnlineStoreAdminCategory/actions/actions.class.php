@@ -13,4 +13,20 @@ require_once dirname(__FILE__).'/../lib/ddOnlineStoreAdminCategoryGeneratorHelpe
  */
 class ddOnlineStoreAdminCategoryActions extends autoDdOnlineStoreAdminCategoryActions
 {
+	public function executeIndex(sfWebRequest $request)
+	{
+		if(!ProductCategoryTable::getInstance()->isTree())
+		{
+			throw new Exception('Model "'.$this->model.'" is not a NestedSet');
+		}
+
+		if(!sfJqueryTreeDoctrineManager::modelHasManyRoots('ProductCategory'))
+		{
+			$this->redirect($this->generateUrl('online_store_admin_category_manage_tree', array('root' => '1')));
+		}
+			
+		return parent::executeIndex($request);
+		
+		//$this->records = $this->getTree($this->model, $request->getParameter('root'));
+	}
 }

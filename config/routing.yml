@@ -6,3 +6,7 @@ online_store_admin_category:
     prefix_path:          /category
     column:               id
     with_wildcard_routes: true
+
+online_store_admin_category_manage_tree:
+  url:                    /category/manage-tree/:root
+  param:                  { module: ddOnlineStoreAdminCategory, action: manageTree }

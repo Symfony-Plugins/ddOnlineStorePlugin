@@ -10,10 +10,24 @@ class PluginProductCategoryTable extends Doctrine_Table
     /**
      * Returns an instance of this class.
      *
-     * @return object PluginProductCategoryTable
+     * @return ProductCategoryTable
      */
     public static function getInstance()
     {
-        return Doctrine_Core::getTable('PluginProductCategory');
+        return Doctrine_Core::getTable('ProductCategory');
     }
+    
+	/**
+	 * Return the query to fetch all roots
+	 * 
+	 * @return Doctrine_Query
+	 */
+	public function addFetchRootsInQuery(Doctrine_Query $query)
+	{
+		$tree = $this->getTree();
+		$q = $tree->getBaseQuery();
+        $q = $q->addWhere($q->getRootAlias().'.lft = ?', 1);
+        
+        return $q;
+	}
 }

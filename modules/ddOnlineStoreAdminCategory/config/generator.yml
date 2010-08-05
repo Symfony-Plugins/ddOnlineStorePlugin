@@ -17,6 +17,7 @@ generator:
       list:    
         title:             "Product Categories list"
         display:           [ name ]
+        table_method:      addFetchRootsInQuery
       filter:
         class:             false
       form:    ~
