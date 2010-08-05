@@ -2,7 +2,7 @@
 
 /**
  * ddOnlineStorePlugin configuration.
- * 
+ *
  * @package     ddOnlineStorePlugin
  * @subpackage  config
  * @author      Diego D
@@ -10,12 +10,12 @@
  */
 class ddOnlineStorePluginConfiguration extends sfPluginConfiguration
 {
-  const VERSION = '1.0.0-DEV';
+	const VERSION = '1.0.0-DEV';
 
-  /**
-   * @see sfPluginConfiguration
-   */
-  public function initialize()
-  {
-  }
+	/**
+	 * @see sfPluginConfiguration
+	 */
+	public function initialize()
+	{
+	}
 }

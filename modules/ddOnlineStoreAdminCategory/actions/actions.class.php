@@ -13,6 +13,12 @@ require_once dirname(__FILE__).'/../lib/ddOnlineStoreAdminCategoryGeneratorHelpe
  */
 class ddOnlineStoreAdminCategoryActions extends autoDdOnlineStoreAdminCategoryActions
 {
+	public function preExecute()
+	{
+		parent::preExecute();
+		$this->getResponse()->addStylesheet('/ddOnlineStorePlugin/css/screen.css');
+	}
+	
 	public function executeIndex(sfWebRequest $request)
 	{
 		if(!ProductCategoryTable::getInstance()->isTree())
