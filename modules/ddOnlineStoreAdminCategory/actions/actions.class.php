@@ -32,13 +32,11 @@ class ddOnlineStoreAdminCategoryActions extends autoDdOnlineStoreAdminCategoryAc
 		}
 			
 		return parent::executeIndex($request);
-		
-		//$this->records = $this->getTree($this->model, $request->getParameter('root'));
 	}
 	
 	public function executeManageTree(sfWebRequest $request)
 	{
 		$this->category = $this->getRoute()->getObject();
-		$this->records = sfJqueryTreeDoctrineManager::getTree("ProductCategory", $request->getParameter('root'));
+		$this->records = sfJqueryTreeDoctrineManager::getTree("ProductCategory", $this->category->getId());
 	}
 }

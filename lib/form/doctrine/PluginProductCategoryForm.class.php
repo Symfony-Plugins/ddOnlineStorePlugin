@@ -10,4 +10,12 @@
  */
 abstract class PluginProductCategoryForm extends BaseProductCategoryForm
 {
+	public function setup()
+	{
+		parent::setup();
+		
+		$this->useFields(array(
+			'id', 'name', 'description'
+		));
+	}
 }

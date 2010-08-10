@@ -30,6 +30,12 @@ generator:
       filter:
         class:             false
         
-      form:    ~
-      edit:    ~
-      new:     ~
+      form:    
+        display:
+          Data:           [ name, description ]
+          
+      edit:    
+        title:            "Edit '%%name%%' category"
+        
+      new:     
+        title:            "New category"
