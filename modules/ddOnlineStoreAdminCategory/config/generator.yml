@@ -26,16 +26,18 @@ generator:
             params:        { class: "manage_tree" }
             action:        "manageTree"
           _delete:         ~
+        actions:
+          _new:            { label: "New Root Category" }
           
       filter:
         class:             false
         
       form:    
         display:
-          Data:           [ name, description ]
+          Data:            [ name, description ]
           
       edit:    
-        title:            "Edit '%%name%%' category"
+        title:             "Edit '%%name%%' category"
         
       new:     
-        title:            "New category"
+        title:             "New category"

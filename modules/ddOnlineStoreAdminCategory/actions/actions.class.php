@@ -12,13 +12,7 @@ require_once dirname(__FILE__).'/../lib/ddOnlineStoreAdminCategoryGeneratorHelpe
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
 class ddOnlineStoreAdminCategoryActions extends autoDdOnlineStoreAdminCategoryActions
-{
-	public function preExecute()
-	{
-		parent::preExecute();
-		$this->getResponse()->addStylesheet('/ddOnlineStorePlugin/css/screen.css');
-	}
-	
+{	
 	public function executeIndex(sfWebRequest $request)
 	{
 		if(!ProductCategoryTable::getInstance()->isTree())
@@ -32,7 +26,6 @@ class ddOnlineStoreAdminCategoryActions extends autoDdOnlineStoreAdminCategoryAc
 	public function executeManageTree(sfWebRequest $request)
 	{
 		$this->category = $this->getRoute()->getObject();
-		
 		$this->records = sfJqueryTreeDoctrineManager::getBranch("ProductCategory", $this->category->getId());
 	}
 }

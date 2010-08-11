@@ -13,9 +13,26 @@ abstract class PluginProductCategoryForm extends BaseProductCategoryForm
 	public function setup()
 	{
 		parent::setup();
-		
+
 		$this->useFields(array(
-			'id', 'name', 'description'
-		));
+            'id', 'name', 'description'
+        ));
 	}
+
+    protected function doSave($con = null)
+    {
+        parent::doSave($con);
+
+        if($this->isNew())
+        {
+	        $node = $this->object->getNode();
+	        $parent = $this->object->getTable()->getTree()->fetchRoot();
+	        
+	        if($parent)
+	        {
+	            $method = ($node->isValidNode() ? 'move' : 'insert') . 'AsLastChildOf';
+	            $node->$method($parent); //calls $this->object->save internally
+	        }
+        }
+    }
 }
