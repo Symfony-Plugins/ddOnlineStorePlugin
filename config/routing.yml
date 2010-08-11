@@ -8,7 +8,7 @@ online_store_admin_category:
     with_wildcard_routes: true
 
 online_store_admin_category_manage_tree:
-  url:                    /category/:id/manage-tree
+  url:                    /category/:id/manageTree
   class:                  sfDoctrineRoute
   options:                { model: ProductCategory, type: object }
   param:                  { module: ddOnlineStoreAdminCategory, action: manageTree }

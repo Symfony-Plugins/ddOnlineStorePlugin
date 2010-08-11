@@ -26,7 +26,8 @@ class PluginProductCategoryTable extends Doctrine_Table
 	{
 		$tree = $this->getTree();
 		$q = $tree->getBaseQuery();
-        $q = $q->addWhere($q->getRootAlias().'.lft = ?', 1);
+        $q = $q->addWhere($q->getRootAlias().'.level = ?', 1)
+          ->orderBy($q->getRootAlias().'.lft'); 
         
         return $q;
 	}

@@ -1,40 +1,43 @@
 ProductCategory:
-  apple:
-    name:        "Apple Products"
-    children:    
-      macbook:
-        name:      "Mackbook"
-      ipod:
-        name:      "iPod"
-      iPhone:
-        name:      "iPhone"
-        
-  laptop_accesory:
-    name:        "Laptop Accesory"
+  root:
+    name:            "Root"
     children:
-      laptop_cases:
-        name:      "Laptop Cases"
+      apple:
+        name:        "Apple Products"
+        children:    
+          macbook:
+            name:      "Mackbook"
+          ipod:
+            name:      "iPod"
+          iPhone:
+            name:      "iPhone"
+      
+      laptop_accesory:
+        name:        "Laptop Accesory"
+        children:
+          laptop_cases:
+            name:      "Laptop Cases"
         
-  cellphone_accesory:
-    name:        "Cellphone Accesory"
-    children:
-      cellphone_cases:
-        name:      "Cellphone Cases"
+      cellphone_accesory:
+        name:        "Cellphone Accesory"
+        children:
+          cellphone_cases:
+            name:      "Cellphone Cases"
         
-  pen_drive:
-    name:        "Pen Drive"
+      pen_drive:
+        name:        "Pen Drive"
     
-  pc_parts:
-    name:        "PC Parts"
+      pc_parts:
+        name:        "PC Parts"
     
-  electronic:
-    name:        "Electronic"
+      electronic:
+        name:        "Electronic"
     
-  networking:
-    name:        "Networking"
+      networking:
+        name:        "Networking"
     
-  gaming:
-    name:        "Gaming"
-    
-  camera_accesory:
-    name:        "Camera Accesory"
+      gaming:
+        name:        "Gaming"
+      
+      camera_accesory:
+        name:        "Camera Accesory"

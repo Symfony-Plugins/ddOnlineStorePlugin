@@ -25,11 +25,6 @@ class ddOnlineStoreAdminCategoryActions extends autoDdOnlineStoreAdminCategoryAc
 		{
 			throw new Exception('Model "'.$this->model.'" is not a NestedSet');
 		}
-
-		if(!sfJqueryTreeDoctrineManager::modelHasManyRoots('ProductCategory'))
-		{
-			$this->redirect($this->generateUrl('online_store_admin_category_manage_tree', array('root' => '1')));
-		}
 			
 		return parent::executeIndex($request);
 	}
@@ -37,6 +32,7 @@ class ddOnlineStoreAdminCategoryActions extends autoDdOnlineStoreAdminCategoryAc
 	public function executeManageTree(sfWebRequest $request)
 	{
 		$this->category = $this->getRoute()->getObject();
-		$this->records = sfJqueryTreeDoctrineManager::getTree("ProductCategory", $this->category->getId());
+		
+		$this->records = sfJqueryTreeDoctrineManager::getBranch("ProductCategory", $this->category->getId());
 	}
 }
