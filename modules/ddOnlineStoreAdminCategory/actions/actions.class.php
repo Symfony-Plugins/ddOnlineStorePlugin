@@ -57,5 +57,36 @@ class ddOnlineStoreAdminCategoryActions extends autoDdOnlineStoreAdminCategoryAc
         $this->getResponse()->setHttpHeader('Content-type', 'application/json');
         $this->setTemplate('json');
 	}
+	
+	public function executeDelete(sfWebRequest $request)
+	{
+		$request->checkCSRFProtection();
 
+		$this->dispatcher->notify(new sfEvent($this, 'admin.delete_object', array('object' => $this->getRoute()->getObject())));
+
+		if ($this->getRoute()->getObject()->getNode()->delete())
+		{
+			$this->getUser()->setFlash('notice', 'The item was deleted successfully.');
+		}
+
+		$this->redirect('@online_store_admin_category');
+	}
+
+	protected function executeBatchDelete(sfWebRequest $request)
+	{
+		$ids = $request->getParameter('ids');
+
+		$records = Doctrine_Query::create()
+		->from('ProductCategory')
+		->whereIn('id', $ids)
+		->execute();
+
+		foreach ($records as $record)
+		{
+			$record->getNode()->delete();
+		}
+
+		$this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
+		$this->redirect('@online_store_admin_category');
+	}
 }
