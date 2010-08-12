@@ -15,3 +15,11 @@ online_store_admin_category_manage_tree:
   requirements:
     id: \d+
     sf_method: [get]
+    
+online_store_admin_category_move:
+  class:                  sfRequestRoute
+  url:                    /category/move
+  param:                  { module: ddOnlineStoreAdminCategory, action: move }
+  requirements:
+    sf_method: [post]
+    

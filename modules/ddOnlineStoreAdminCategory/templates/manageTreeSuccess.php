@@ -1,6 +1,6 @@
 <?php use_helper('JavascriptBase', 'I18N', 'Date', 'sfJqueryTreeDoctrine'); ?>
 <?php include_partial('ddOnlineStoreAdminCategory/assets') ?>
-<?php add_needed_assets(); ?>
+<?php sf_jquery_tree_manager_add_needed_assets(); ?>
 <div id="sf_admin_container">
 	<h1><?php echo '"'.$category->getName().'" '.__('subcategories', array(), 'messages') ?></h1>
     <?php include_partial('ddOnlineStoreAdminCategory/flashes') ?>
