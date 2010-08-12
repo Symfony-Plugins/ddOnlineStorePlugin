@@ -3,3 +3,13 @@
 {
 	background:url("../images/tree_view.gif") no-repeat scroll 0 0 transparent;
 }
+
+#sf_admin_container .waiting
+{
+  margin: 4px 0;
+  padding: 4px 4px 4px 30px;
+  background: url(../images/waiting.gif) no-repeat 10px 4px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffc;
+}
