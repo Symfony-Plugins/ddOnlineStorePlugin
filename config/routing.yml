@@ -1,3 +1,4 @@
+#Category routes
 online_store_admin_category:
   class:                  sfDoctrineRouteCollection
   options:
@@ -22,4 +23,14 @@ online_store_admin_category_move:
   param:                  { module: ddOnlineStoreAdminCategory, action: move }
   requirements:
     sf_method: [post]
-    
+
+
+#Product routes
+online_store_admin_product:
+  class:                  sfDoctrineRouteCollection
+  options:
+    model:                Product
+    module:               ddOnlineStoreAdminProduct
+    prefix_path:          /product
+    column:               id
+    with_wildcard_routes: true

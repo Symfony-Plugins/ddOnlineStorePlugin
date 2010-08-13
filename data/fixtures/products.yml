@@ -1,0 +1,71 @@
+Product:
+  macbook_white:
+    category:        macbook
+    name:            "Macbook White"
+    price:           699.99
+  macbook_pro:
+    category:        macbook
+    name:            "Macbook Pro"
+    price:           999.99
+    
+  ipod_touch:
+    category:        ipod
+    name:            "iPod Touch"
+    price:           300.00
+  ipod_nano:
+    category:        ipod
+    name:            "iPod Nano"
+    price:           99.90
+  
+  iphone_3G:
+    category:        iphone
+    name:            "iPhone 3G"
+    price:           99
+  iphone_3GS:
+    category:        iphone
+    name:            "iPhone 3GS"
+    price:           199
+  iphone_4G:         
+    category:        iphone
+    name:            "iPhone 4G"
+    price:           299
+       
+  
+  laptop_case_sleeve:
+    category:        laptop_cases
+    name:            "13\" Laptop Sleeve & Skin Range"
+    price:           22.95
+  laptop_case_sleeve_15:
+    category:        laptop_cases
+    name:            "15\" Laptop Sleeve & Skin Range"
+    price:           30.00
+  laptop_case_larobe:
+    category:        laptop_cases
+    name:            "Be.ez LArobe Allure MacBook Pro 17\" - Black"
+    price:           33.50
+  
+  htc_aria_case:
+    category:        cellphone_cases
+    name:            "HTC Aria Clear Skin Case"
+    price:           12.99
+  htc_evo_case:
+    category:        cellphone_cases
+    name:            "OEM HTC EVO Black Skin Case"
+    price:           16.99
+  lg_fathom_case:
+    category:        cellphone_cases
+    name:            "LG Fathom Blue Cover"
+    price:           9.99
+
+  pendrive_kingston_16gb:
+    category:        pendrive
+    name:            "Pendrive Kingston 16GB"
+    price:           33.99
+  pendrive_kington_8gb:
+    category:        pendrive
+    name:            "Pendrive Kingston 8GB"
+    price:           20.00
+  pendrive_datatraveler_16gb:
+    category:        pendrive
+    name:            "Pendrive Datatraveler 16GB"
+    price:           25.99

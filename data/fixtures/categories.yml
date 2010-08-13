@@ -9,7 +9,7 @@ ProductCategory:
             name:      "Mackbook"
           ipod:
             name:      "iPod"
-          iPhone:
+          iphone:
             name:      "iPhone"
       
       laptop_accesory:
@@ -24,7 +24,7 @@ ProductCategory:
           cellphone_cases:
             name:      "Cellphone Cases"
         
-      pen_drive:
+      pendrive:
         name:        "Pen Drive"
     
       pc_parts:

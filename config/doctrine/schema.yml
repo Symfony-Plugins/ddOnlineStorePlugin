@@ -6,3 +6,19 @@ ProductCategory:
     id:                   { type: integer(4), primary: true, autoincrement: true }
     name:                 { type: string(255), notnull: true }
     description:          { type: clob }
+    
+
+Product:
+  actAs:                  
+    Sluggable:            { unique: true, fields: [name], canUpdate: true }
+  columns:
+    id:                   { type: integer(4), primary: true, autoincrement: true }
+    category_id:          { type: integer(4), notnull: true }
+    name:                 { type: string(255), notnull: true }
+    description:          { type: clob }
+    price:                { type: decimal, notnull: true }
+    is_available:         { type: boolean, notnull: true, default: 1 }
+    image_name:           { type: string(255)}
+  relations:
+    category:             { class: ProductCategory, local: category_id, foreign: id, foreignAlias: products, onDelete: CASCADE }
+  
