@@ -13,3 +13,9 @@
   border-bottom: 1px solid #ddd;
   background-color: #ffc;
 }
+
+.form_select_category
+{
+	font-weight:bold;
+	font-style:italic;
+}
