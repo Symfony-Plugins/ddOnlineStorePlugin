@@ -17,6 +17,16 @@ class PluginProductCategoryTable extends Doctrine_Table
         return Doctrine_Core::getTable('ProductCategory');
     }
     
+    /**
+     * Return the query to sort categories
+     * 
+     * @return Doctrine_Query
+     */
+    public function addSortedCategory(Doctrine_Query $query)
+    {
+    	return $query->orderBy($q->getRootAlias().'.lft');
+    }
+    
 	/**
 	 * Return the query to fetch all roots
 	 * 
@@ -25,10 +35,9 @@ class PluginProductCategoryTable extends Doctrine_Table
 	public function addFetchRootsInQuery(Doctrine_Query $query)
 	{
 		$tree = $this->getTree();
-		$q = $tree->getBaseQuery();
-        $q = $q->addWhere($q->getRootAlias().'.level = ?', 1)
-          ->orderBy($q->getRootAlias().'.lft'); 
+		$q = $tree->getBaseQuery()
+			->addWhere($q->getRootAlias().'.level = ?', 1);
         
-        return $q;
+        return $this->addSortedCategory($q);
 	}
 }

@@ -11,6 +11,7 @@ ProductCategory:
 Product:
   actAs:                  
     Sluggable:            { unique: true, fields: [name], canUpdate: true }
+    Timestampable:        ~
   columns:
     id:                   { type: integer(4), primary: true, autoincrement: true }
     category_id:          { type: integer(4), notnull: true }
