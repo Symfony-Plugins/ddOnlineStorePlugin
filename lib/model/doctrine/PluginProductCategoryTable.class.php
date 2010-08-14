@@ -24,7 +24,7 @@ class PluginProductCategoryTable extends Doctrine_Table
      */
     public function addSortedCategory(Doctrine_Query $query)
     {
-    	return $query->orderBy($q->getRootAlias().'.lft');
+    	return $query->orderBy($query->getRootAlias().'.lft');
     }
     
 	/**
@@ -34,10 +34,23 @@ class PluginProductCategoryTable extends Doctrine_Table
 	 */
 	public function addFetchRootsInQuery(Doctrine_Query $query)
 	{
-		$tree = $this->getTree();
-		$q = $tree->getBaseQuery()
+		$q = $this->getTree();
+		$q = $q->getBaseQuery()
 			->addWhere($q->getRootAlias().'.level = ?', 1);
         
         return $this->addSortedCategory($q);
+	}
+	
+	/**
+	 * Return all categories sorted except root
+	 * 
+	 * @return Doctrine_Collection
+	 */
+	public function getAllCategoriesExceptRoot()
+	{
+		$q = $this->addSortedCategory($this->getTree()->getBaseQuery());
+		$q->andWhere($q->getRootAlias().'.lft <> ?', 1);
+		
+		return $q->execute();
 	}
 }
