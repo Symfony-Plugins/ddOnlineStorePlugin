@@ -3,7 +3,7 @@ Product:
     category:        macbook
     name:            "Macbook White"
     price:           699.99
-    image_name:      mackbook_white.jpg
+    image_name:      macbook_white.jpg
   macbook_pro:
     category:        macbook
     name:            "Macbook Pro"
