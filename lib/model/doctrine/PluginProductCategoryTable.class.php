@@ -34,9 +34,8 @@ class PluginProductCategoryTable extends Doctrine_Table
 	 */
 	public function addFetchRootsInQuery(Doctrine_Query $query)
 	{
-		$q = $this->getTree();
-		$q = $q->getBaseQuery()
-			->addWhere($q->getRootAlias().'.level = ?', 1);
+		$q = $this->getTree()->getBaseQuery();
+		$q = $q->addWhere($q->getRootAlias().'.level = ?', 1);
         
         return $this->addSortedCategory($q);
 	}

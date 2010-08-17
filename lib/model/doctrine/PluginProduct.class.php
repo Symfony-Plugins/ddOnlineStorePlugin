@@ -12,5 +12,37 @@
  */
 abstract class PluginProduct extends BaseProduct
 {
-
+	public function getImageFolder()
+	{
+	   return 'products';	
+	}
+	
+    public function getImageWithPath($type = 'original')
+    {
+    	$image = $this->getImageFolder()."/";
+    	if($type != 'original')
+    	{
+    		$image .= $type."/";
+    	}
+    	
+    	$image .= ($this->getImageName())?$this->getImageName():'no-image.jpg';
+    	
+    	return sfContext::getInstance()->getRequest()->getRelativeUrlRoot().'/uploads/'.$image;
+    }
+    
+    /**
+     * Deletes all files
+     * 
+     * @param $mainDirectory
+     */
+    public function deleteAllImages($mainDirectory)
+    {
+    	foreach(sfConfig::get('app_ddOnlineStore_images') as $key=>$imagesType)
+    	{
+            if ($mainDirectory && is_file($file = $mainDirectory.'/'.$key.'/'.$this->getImageName()))
+            {
+                unlink($file);
+            }
+    	}
+    }
 }

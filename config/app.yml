@@ -2,3 +2,18 @@ all:
   sfJqueryTree:
     route_back:       online_store_admin_category
     route_edit:       online_store_admin_category_edit
+  
+  sfImageTransformPlugin:
+    default_adapter: GD # GD or ImageMagick
+    mime_type:
+      auto_detect: true
+      
+  ddOnlineStore:
+    images:
+      list:
+        width:        140
+        height:       102
+      
+      detail:           
+        width:        400
+        height:       300

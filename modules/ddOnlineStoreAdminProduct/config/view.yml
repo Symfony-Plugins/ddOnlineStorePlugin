@@ -1,3 +1,7 @@
 all:
+  javascripts:
+    - /sfJqueryReloadedPlugin/js/jquery-1.4.2.min.js
+    - /ddOnlineStorePlugin/js/jquery.colorbox-min.js
   stylesheets:
     - /ddOnlineStorePlugin/css/screen.css
+    - /ddOnlineStorePlugin/css/colorbox.css
