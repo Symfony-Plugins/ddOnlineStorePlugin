@@ -10,7 +10,8 @@ generator:
     route_prefix:          online_store_admin_category
     with_doctrine_route:   true
     actions_base_class:    sfActions
-    
+    css:                   false
+       
     config:
       actions: ~
       fields:  ~
