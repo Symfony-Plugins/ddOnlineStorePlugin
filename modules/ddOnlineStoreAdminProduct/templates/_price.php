@@ -1,0 +1,1 @@
+&#36; <?php echo $product->getPrice(); ?>
