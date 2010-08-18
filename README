@@ -1,8 +1,92 @@
-= ddOnlineStorePlugin =
+# ddOnlineStore plugin #
 
-This plugin provide models, modules, and other features to manage a real online store. 
+The `ddOnlineStorePlugin` is a symfony plugin that provides models (categories and products objects), 
+modules and others features to manage a real **catalog** for a online store.
 
-== Entities in this plugin ==
+With this plugin you will can:
 
-* Categories
-* Products
+*   Manage product categories:
+    *   Name.
+    *   Descripcion.
+    *   Sortable via ajax.
+*   Manage products for your catalog online:
+    *   Name, description, price.
+    *   Avalibility.
+    *   One Image.
+
+
+## Dependencies ##
+
+This plugin doesn't have strict dependencies, but needs the following to work:
+
+*   [sfJqueryReloadedPlugin](http://www.symfony-project.org/plugins/sfJqueryReloadedPlugin "sfJqueryReloadedPlugin").
+*   [sfJqueryTreeDoctrineManagerPlugin](http://www.symfony-project.org/plugins/sfJqueryTreeDoctrineManagerPlugin "sfJqueryTreeDoctrineManagerPlugin").
+*   [sfImageTransformPlugin](http://www.symfony-project.org/plugins/sfImageTransformPlugin "sfImageTransformPlugin").
+
+Also, we recommend use the catalog backend with [sfAdminDashPlugin](http://www.symfony-project.org/plugins/sfAdminDashPlugin "sfAdminDashPlugin") plugin.
+
+
+## Installation ##
+
+You have two different ways to install this plugin:
+
+*   Via a package
+
+    symfony plugin:install ddOnlineStorePlugin
+
+*   Via a Subversion checkout
+  
+    svn co http//svn.symfony-project.com/plugins/ddOnlineStorePlugin/trunk plugins/ddOnlineStorePlugin
+
+## General Setup ##
+
+*   Activate the plugin in the `config/ProjectConfiguration.class.php`
+  
+    [php]
+    class ProjectConfiguration extends sfProjectConfiguration
+    {
+      public function setup()
+      {
+        $this->enablePlugins(array(
+        //System plugins
+        'sfDoctrinePlugin',
+        '...',
+        
+        //ddOnlineStorePlugin plugins
+        'sfJqueryReloadedPlugin',
+        'sfJqueryTreeDoctrineManagerPlugin',
+        'sfImageTransformPlugin',
+        'ddOnlineStorePlugin'
+        ));
+      }
+    }
+
+*   Publish assets
+
+    symfony plugin:publish-assets    
+
+*   Rebuild your model, create the database, and insert sql with test data.
+
+    symfony doctrine:build --all --and-load --no-confirmation
+
+*   Clear you cache
+
+    symfony cc
+    
+    
+## Backend Setup ##
+
+To setup the backend to manage the catalog, you have to do this:
+
+*   Enable one or more modules in your `settings.yml`
+    all:
+      .settings:
+        enabled_modules:      [ default, ..., ddOnlineStoreAdminCategory, ddOnlineStoreAdminProducts ]
+
+*   Configure the plugin. All settings of the plugin are in:
+
+    plugins/ddOnlineStorePlugin/config/app.yml   
+
+*   Clear you cache
+
+    symfony cc
