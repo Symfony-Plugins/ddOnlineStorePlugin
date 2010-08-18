@@ -41,6 +41,18 @@ class PluginProductCategoryTable extends Doctrine_Table
 	}
 	
 	/**
+     * Return the roots categories
+     * 
+     * @return Doctrine_Collection
+     */
+	public function getRootsCategories()
+	{
+		$q = $this->addFetchRootsInQuery($this->createQuery());
+		
+		return $q->execute();
+	}
+	
+	/**
 	 * Return all categories sorted except root
 	 * 
 	 * @return Doctrine_Collection
