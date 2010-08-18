@@ -18,7 +18,7 @@ abstract class PluginProductFormFilter extends BaseProductFormFilter
         $this->setWidget('category_id', new sfWidgetFormDoctrineChoiceCateogory(array(
             'model'         => $this->getRelatedModelName('category'),
             'table_method'  => 'getAllCategoriesExceptRoot',            
-            'add_empty'     => false,
+            'add_empty'     => true,
             'shift_level'   => 1,
             'strong_levels' => array('1'),
             'renderer_class' => 'sfWidgetFormSelectCategory'          

@@ -20,7 +20,7 @@ With this plugin you will can:
 This plugin doesn't have strict dependencies, but needs the following to work:
 
 *   [sfJqueryReloadedPlugin](http://www.symfony-project.org/plugins/sfJqueryReloadedPlugin "sfJqueryReloadedPlugin").
-*   [sfJqueryTreeDoctrineManagerPlugin](http://www.symfony-project.org/plugins/sfJqueryTreeDoctrineManagerPlugin "sfJqueryTreeDoctrineManagerPlugin").
+*   [sfJqueryTreeDoctrineManagerPlugin](http://www.symfony-project.org/plugins/sfJqueryTreeDoctrineManagerPlugin "sfJqueryTreeDoctrineManagerPlugin") (install only via repository to get the lastest version).
 *   [sfImageTransformPlugin](http://www.symfony-project.org/plugins/sfImageTransformPlugin "sfImageTransformPlugin").
 
 Also, we recommend use the catalog backend with [sfAdminDashPlugin](http://www.symfony-project.org/plugins/sfAdminDashPlugin "sfAdminDashPlugin") plugin.
@@ -79,6 +79,7 @@ You have two different ways to install this plugin:
 To setup the backend to manage the catalog, you have to do this:
 
 *   Enable one or more modules in your `settings.yml`
+
         all:
           .settings:
             enabled_modules:      [ default, ..., ddOnlineStoreAdminCategory, ddOnlineStoreAdminProducts ]
