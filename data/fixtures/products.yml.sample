@@ -2,81 +2,128 @@ Product:
   macbook_white:
     category:        macbook
     name:            "Macbook White"
+    subname:         "Fast and beauty"
     price:           699.99
-    image_name:      macbook_white.jpg
+    images:
+      macbook_white_1:
+        image_name: macbook_white.jpg
+      macbook_white_2:
+        image_name: macbook_white2.jpg
+      macbook_white_3:
+        image_name: macbook_white3.jpg
+    description: |
+      * Unique interior memory foam for ipad protection
+      * Corner flaps keep your iPad in place.
+      * Tote handle can be hidden when not in use
+      * Rugged zippers for years of use
+      * Silk Fiber or Nylon material gives you a perfect look!
+    specifications: |
+      * Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+      * Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+      * Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+      * Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+      * Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+      * Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
   macbook_pro:
     category:        macbook
     name:            "Macbook Pro"
     price:           999.99
-    image_name:      mackbook_pro.jpg
-    
+    images:
+      macbook_pro_1:
+        image_name: mackbook_pro.jpg
+        
   ipod_touch:
     category:        ipod
     name:            "iPod Touch"
     price:           300.00
-    image_name:      ipod_touch.jpg
+    images:
+      ipod_touch_1:
+        image_name: ipod_touch.jpg
   ipod_nano:
     category:        ipod
     name:            "iPod Nano"
     price:           99.90
-    image_name:      ipod_nano.jpg
+    images:
+      ipod_nano_1:
+        image_name: ipod_nano.jpg
   
   iphone_3G:
     category:        iphone
     name:            "iPhone 3G"
     price:           99
-    image_name:      iphone3g.jpg
+    images:
+      iphone3g_1:
+        image_name: iphone3g.jpg
   iphone_3GS:
     category:        iphone
     name:            "iPhone 3GS"
     price:           199
-    image_name:      iphone3gs.jpg
+    images:
+      iphone3gs_1:
+        image_name: iphone3gs.jpg
   iphone_4:         
     category:        iphone
     name:            "iPhone 4"
     price:           299
-    image_name:      iphone4.jpg
-       
+    images:
+      iphone4_1:
+        image_name: iphone4.jpg
   
   laptop_case_sleeve:
     category:        laptop_cases
     name:            "13\" Laptop Sleeve & Skin Range"
     price:           22.95
-    image_name:      laptop_case_sleeve.jpg
+    images:
+      laptop_case_sleeve_1:
+        image_name: laptop_case_sleeve.jpg
   laptop_case_sleeve_15:
     category:        laptop_cases
     name:            "15\" Laptop Sleeve & Skin Range"
     price:           30.00
-    image_name:      laptop_case_sleeve_15.jpg
+    images:
+      laptop_case_sleeve_15_1:
+        image_name: laptop_case_sleeve_15.jpg
   laptop_case_larobe:
     category:        laptop_cases
     name:            "Be.ez LArobe Allure MacBook Pro 17\" - Black"
     price:           33.50
-    image_name:      laptop_case_larobe.jpg
+    images:
+      laptop_case_larobe_1:
+        image_name: laptop_case_larobe.jpg
   
   htc_aria_case:
     category:        cellphone_cases
     name:            "HTC Aria Clear Skin Case"
     price:           12.99
-    image_name:      htc_aria_case.jpg
+    images:
+      htc_aria_case_1:
+        image_name: htc_aria_case.jpg
   htc_evo_case:
     category:        cellphone_cases
     name:            "OEM HTC EVO Black Skin Case"
     price:           16.99
-    image_name:      htc_evo_case.jpg
+    images:
+      htc_evo_case_1:
+        image_name: htc_evo_case.jpg
   lg_fathom_case:
     category:        cellphone_cases
     name:            "LG Fathom Blue Cover"
     price:           9.99
-    image_name:      lg_fathom_case.jpg
+    images:
+      lg_fathom_case_1:
+        image_name: lg_fathom_case.jpg
 
   pendrive_kingston_16gb:
     category:        pendrive
     name:            "Pendrive Kingston 16GB"
     price:           33.99
-    image_name:      kingston_16.jpg
+    images:
+      kingston16_1:
+        image_name: kingston_16.jpg
   pendrive_kington_8gb:
     category:        pendrive
     name:            "Pendrive Kingston 8GB"
     price:           20.00
-    image_name:      kingston_8.jpg
+    images:
+      kingston8_1:
+        image_name: kingston_8.jpg

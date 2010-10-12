@@ -13,9 +13,9 @@ all:
       ProductImage:
         directory:    products
         images:
-          image_file:
+          image_name:
             padding:    { percent: 0, color: "#ffffff" }
-            ratio:      1
+            ratio:      1.32
             sizes:
-              thumb:    { width: 140, height: 102 }
-              detail:   { width: 417, height: 321 }
+              thumb:    { width: 140 }
+              detail:   { width: 417 }

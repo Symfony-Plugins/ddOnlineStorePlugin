@@ -14,7 +14,9 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:
+        image_name:        { label: "Image" }
+        image_thumb:       { label: "Image" }
       
       list:
         title:             Product images list

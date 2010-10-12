@@ -16,4 +16,45 @@ class PluginProductImageTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('PluginProductImage');
     }
+    
+    /**
+     * @return Doctrine_Query
+     */
+    public function getInOrderQuery()
+    {
+    	return $this->createQuery('i')
+    		->orderBy('i.position ASC');
+    			
+    }
+    
+	/**
+	 * @param int $productId
+     * @return Doctrine_Query
+     */
+    public function getAllProductImagesInOrderQuery($productId)
+    {
+    	return $this->getInOrderQuery()
+    		->where('i.product_id = ?', $productId);
+    			
+    }
+    
+    /**
+     * @param int $productId
+     * @return Doctrine_Collection
+     */
+    public function getProductImagesInOrder($productId)
+    {
+    	return $this->getAllProductImagesInOrderQuery($productId)
+    		->execute();
+    }
+    
+    /**
+     * @param int $productId
+     * @return ProductImage
+     */
+    public function getFirstProductImage($productId)
+    {
+    	return $this->getAllProductImagesInOrderQuery($productId)
+    		->fetchOne();
+    }
 }

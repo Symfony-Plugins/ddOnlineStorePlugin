@@ -16,7 +16,9 @@ Product:
     id:                   { type: integer(4), primary: true, autoincrement: true }
     category_id:          { type: integer(4), notnull: true }
     name:                 { type: string(255), notnull: true }
+    subname:              { type: string(255) }
     description:          { type: clob }
+    specifications:       { type: clob }
     price:                { type: decimal, notnull: true }
     is_available:         { type: boolean, notnull: true, default: 1 }
     is_featured:          { type: boolean, notnull: true, default: 0 }

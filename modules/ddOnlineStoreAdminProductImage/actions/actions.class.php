@@ -32,7 +32,7 @@ class ddOnlineStoreAdminProductImageActions extends autoDdOnlineStoreAdminProduc
 		$this->item = $this->getRoute()->getObject();
 		$this->item->promote();
 
-		$this->redirect($this->getModuleName());
+		$this->redirect('@online_store_admin_product_image');
 	}
 
 	/**
@@ -45,6 +45,6 @@ class ddOnlineStoreAdminProductImageActions extends autoDdOnlineStoreAdminProduc
 		$this->item = $this->getRoute()->getObject();
 		$this->item->demote();
 
-		$this->redirect($this->getModuleName());
+		$this->redirect('@online_store_admin_product_image');
 	}
 }

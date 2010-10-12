@@ -1,0 +1,1 @@
+<a href="<?php echo url_for('online_store_admin_product') ?>">&lt;- Back to products list</a>

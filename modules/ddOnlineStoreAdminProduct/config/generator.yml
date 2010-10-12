@@ -27,7 +27,7 @@ generator:
         
       form:    
         display:
-          Main Data:       [ category_id, name, description, price, is_available, is_featured ]
+          Main Data:       [ category_id, name, subname, description, specifications, price, is_available, is_featured ]
           
       edit:    
         title:             "Edit '%%name%%' product"
