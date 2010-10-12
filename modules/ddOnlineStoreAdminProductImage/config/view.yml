@@ -1,0 +1,6 @@
+all:
+  javascripts:
+    - /ddOnlineStorePlugin/js/jquery.Jcrop.min.js
+  stylesheets:
+    - /ddOnlineStorePlugin/css/screen.css
+    - /ddOnlineStorePlugin/css/jquery.Jcrop.css

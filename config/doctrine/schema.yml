@@ -20,7 +20,17 @@ Product:
     price:                { type: decimal, notnull: true }
     is_available:         { type: boolean, notnull: true, default: 1 }
     is_featured:          { type: boolean, notnull: true, default: 0 }
-    image_name:           { type: string(255)}
   relations:
     category:             { class: ProductCategory, local: category_id, foreign: id, foreignAlias: products, onDelete: CASCADE }
   
+ProductImage:
+  actAs:     
+    Sortable:             
+      uniqueBy:           [ product_id ]
+    JCroppable:
+      images:             [ image_name ]
+  columns:
+    id:                   { type: integer(4), primary: true, autoincrement: true }
+    product_id:           { type: integer(4) }
+  relations:
+    Product:              { local: product_id, foreign: id, foreignAlias: images, onDelete: CASCADE }

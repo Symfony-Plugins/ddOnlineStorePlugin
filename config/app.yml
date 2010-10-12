@@ -8,12 +8,14 @@ all:
     mime_type:
       auto_detect: true
       
-  ddOnlineStore:
-    images:
-      list:
-        width:        140
-        height:       102
-      
-      detail:           
-        width:        400
-        height:       300
+  sfDoctrineJCroppablePlugin:
+    models:
+      ProductImage:
+        directory:    products
+        images:
+          image_file:
+            padding:    { percent: 0, color: "#ffffff" }
+            ratio:      1
+            sizes:
+              thumb:    { width: 140, height: 102 }
+              detail:   { width: 417, height: 321 }

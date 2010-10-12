@@ -1,0 +1,1 @@
+<a href="<?php echo url_for('online_store_admin_product_image_set_product', array('product_id' => $product->getId())) ?>">Manage images (<?php echo count($product->images) ?>)</a>

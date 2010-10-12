@@ -1,0 +1,1 @@
+<img src="<?php echo $product_image->getImageSrc('image_name', 'thumb') ?>" />
