@@ -19,3 +19,20 @@
 	font-weight:bold;
 	font-style:italic;
 }
+
+#sf_admin_container #sf_admin_header
+{
+    font-size:110%;
+    margin-bottom:15px;
+    margin-top:20px;
+}
+
+#sf_admin_container #sf_admin_content .sf_admin_action_moveup a
+{
+    background:url("../../csDoctrineActAsSortablePlugin/images/sortable/icons/promote.png") no-repeat scroll 0 0 transparent;
+}
+
+#sf_admin_container #sf_admin_content .sf_admin_action_movedown a
+{
+    background:url("../../csDoctrineActAsSortablePlugin/images/sortable/icons/demote.png") no-repeat scroll 0 0 transparent;
+}
