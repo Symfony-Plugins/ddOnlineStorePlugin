@@ -19,6 +19,7 @@ Product:
     subname:              { type: string(255) }
     description:          { type: clob }
     specifications:       { type: clob }
+    capacity:             { type: integer }
     price:                { type: decimal, notnull: true }
     is_available:         { type: boolean, notnull: true, default: 1 }
     is_featured:          { type: boolean, notnull: true, default: 0 }

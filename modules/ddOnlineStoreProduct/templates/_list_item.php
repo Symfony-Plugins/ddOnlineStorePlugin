@@ -1,5 +1,5 @@
 <li<?php echo ($i%4 == 0)?' class="last"':''?>>
-	<a href="javascript:void(0);" onclick="fadeIn('product_detail_<?php echo $product->getId() ?>');"<?php echo ($product->getIsFeatured())?' class="special"':'' ?>> 
+	<a href="javascript:void(0);" <?php /*onclick="fadeIn('product_detail_<?php echo $product->getId() ?>');"*/?><?php echo ($product->getIsFeatured())?' class="special"':'' ?>> 
 		<img src="<?php echo $product->getMainImage()->getImageSrc('image_name', 'thumb') ?>" alt="<?php echo $product->getName() ?>" /> 
 		<span class="product_info"> 
 			<span class="product_name"><?php echo $product->getName() ?></span> 

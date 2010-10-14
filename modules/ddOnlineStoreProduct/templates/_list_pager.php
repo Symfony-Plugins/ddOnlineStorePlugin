@@ -1,5 +1,5 @@
 <div class="pager">
-	<?php include_partial('ddOnlineStoreProduct/list_pager_extra_content', array('pager' => $pager, 'attributes' => $attributes)) ?>
+	<?php include_partial('list_pager_extra_content', array('pager' => $pager, 'attributes' => $attributes)) ?>
 	
 	<?php if($pager->haveToPaginate()): ?>
 	<div class="pager_links">

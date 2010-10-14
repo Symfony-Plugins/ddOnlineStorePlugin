@@ -15,11 +15,12 @@ generator:
     config:
       actions: ~
       fields:  
-        manage_images:        { label: "Images" }
+        manage_images:     { label: "Images" }
+        capacity:          { help: "Fill this field in MB" }
       
       list:    
         title:             "Products list"
-        display:           [ category, name, _price, _manage_images, is_available, is_featured, created_at ]
+        display:           [ category, name, _capacity, _price, _manage_images, is_available, is_featured, created_at ]
         sort:              [ created_at, desc ]
           
       filter:
@@ -27,7 +28,8 @@ generator:
         
       form:    
         display:
-          Main Data:       [ category_id, name, subname, description, specifications, price, is_available, is_featured ]
+          Main data:       [ category_id, name, subname, description, price ]
+          Extra data:      [ capacity, specifications, is_available, is_featured ]
           
       edit:    
         title:             "Edit '%%name%%' product"

@@ -19,7 +19,10 @@ abstract class PluginProductForm extends BaseProductForm
 	{
 		parent::setup();
 		
-		$this->useFields(array('category_id', 'name', 'subname', 'description', 'specifications', 'price', 'is_available', 'is_featured'));
+		unset($this['created_at']);
+		unset($this['updated_at']);
+		unset($this['slug']);
+		//$this->useFields(array('category_id', 'name', 'subname', 'description', 'specifications', 'price', 'is_available', 'is_featured'));
 		
 		//Category id
 		$this->setWidget('category_id', new sfWidgetFormDoctrineChoiceCateogory(array(
