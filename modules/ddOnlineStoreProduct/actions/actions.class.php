@@ -66,7 +66,7 @@ class ddOnlineStoreProductActions extends sfActions
 
 	protected function getPager()
 	{
-		$pager = new sfDoctrinePager('Product', 8);
+		$pager = new sfDoctrinePager('Product', 16);
 		$pager->setQuery($this->buildQuery());
 		$pager->setPage($this->getPage());
 		$pager->init();
