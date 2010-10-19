@@ -84,6 +84,9 @@ class ddOnlineStoreProductActions extends sfActions
 		return $this->getUser()->getAttribute('ddOnlineStoreProduct.page', 1, 'product_module');
 	}
 
+	/**
+	 * @return Doctrine_Query
+	 */
 	protected function buildQuery()
 	{
 		//Filters
