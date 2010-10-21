@@ -10,9 +10,15 @@ class PluginProductTable extends Doctrine_Table
 	/**
 	 * @return Doctrine_Query
 	 */
-	public function getFeaturedProductQuery()
+	public function getOrderByFeaturedProductQuery()
 	{
 		return $this->createQuery('p')
 			->orderBy('p.is_featured DESC');
+	}
+	
+	public function getFeaturedProductQuery()
+	{
+		return $this->createQuery('p')
+			->where('p.is_featured = ?', true);
 	}
 }
