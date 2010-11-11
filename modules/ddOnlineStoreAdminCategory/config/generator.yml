@@ -36,6 +36,10 @@ generator:
       form:    
         display:
           Data:            [ name, description ]
+        actions:
+          _list:           ~
+          _save:           ~
+          _save_and_add:   { label: "save and add another category" } 
           
       edit:    
         title:             "Edit '%%name%%' category"
