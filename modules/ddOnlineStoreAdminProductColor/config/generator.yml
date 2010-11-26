@@ -1,0 +1,42 @@
+generator:
+  class:                   sfDoctrineGenerator
+  param:
+    model_class:           ProductColor
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          online_store_admin_product_color
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    css:                   false
+
+    config:
+      actions: ~
+      fields:
+        color:             { label: "Color" }
+      
+      list:
+        title:             Product colors list
+        display:           [ _color ]
+#        sort:              [ position, asc ]
+        max_per_page:      100
+#        object_actions:
+#          moveUp:          { label: " ", action: "moveUp" }
+#          moveDown:        { label: " ", action: "moveDown" }
+#          _edit:           ~
+#          _delete:         ~
+        
+      filter:
+        display:           [ product_id ]
+        
+      form:
+        display:
+          Datos:           [ product_id, color ]
+        
+      edit:
+        title:             Edit product color
+        
+      new: 
+        title:             New product color

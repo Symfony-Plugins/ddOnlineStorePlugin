@@ -37,3 +37,10 @@ ProductImage:
     product_id:           { type: integer(4) }
   relations:
     Product:              { local: product_id, foreign: id, foreignAlias: images, onDelete: CASCADE }
+    
+ProductColor:
+  columns:
+    product_id: { type: integer(4), notnull: true }
+    color:      { type: string(6), notnull: true }
+  relations:
+    Product:    { local: product_id, foreign: id, foreignAlias: Colors, onDelete: CASCADE }

@@ -26,6 +26,19 @@ online_store_admin_category_move:
 
 
 #Product routes
+online_store_admin_product_color_set_product:
+  url:                    /product_color/set_product/:product_id
+  param:                  { module: ddOnlineStoreAdminProductColor, action: setProductFilter }
+
+online_store_admin_product_color:
+  class:                  sfDoctrineRouteCollection
+  options:
+    model:                ProductColor
+    module:               ddOnlineStoreAdminProductColor
+    prefix_path:          /product/colors
+    column:               id
+    with_wildcard_routes: true
+    
 online_store_admin_product_image_set_product:
   url:                    /product_image/set_product/:product_id
   param:                  { module: ddOnlineStoreAdminProductImage, action: setProductFilter }

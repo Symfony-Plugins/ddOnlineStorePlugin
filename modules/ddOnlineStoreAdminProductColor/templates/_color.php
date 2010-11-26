@@ -1,0 +1,1 @@
+<div class="color-thumb" style="background-color:#<?php echo $product_color->getColor() ?>;">&nbsp;</div>
