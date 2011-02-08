@@ -15,7 +15,7 @@ all:
         images:
           image_name:
             padding:    { percent: 0, color: "#ffffff" }
-            ratio:      1.32
+            ratio:      1.56
             sizes:
-              thumb:    { width: 140 }
+              thumb:    { width: 210 }
               detail:   { width: 417 }
