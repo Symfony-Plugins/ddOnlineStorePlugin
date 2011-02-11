@@ -21,4 +21,16 @@ class PluginProductTable extends Doctrine_Table
 		return $this->createQuery('p')
 			->where('p.is_featured = ?', true);
 	}
+	
+	/**
+	 * @param int $limit
+	 * @return Doctrine_Collection
+	 */
+	public function getRandomProductsWithLimit($limit)
+	{
+		return $this->createQuery('p')
+			->orderBy('RAND()')
+			->limit($limit)
+			->execute();
+	}
 }
