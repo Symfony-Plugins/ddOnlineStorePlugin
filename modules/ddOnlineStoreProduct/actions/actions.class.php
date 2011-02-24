@@ -21,6 +21,9 @@ class ddOnlineStoreProductActions extends sfActions
 		if($request->getParameter('page'))
 		{
 			$this->setPage($request->getParameter('page'));
+		}else
+		{
+			$this->setPage(1);
 		}
 
 		$this->pager = $this->getPager();
