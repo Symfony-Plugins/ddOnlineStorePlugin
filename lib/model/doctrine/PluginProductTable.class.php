@@ -16,10 +16,25 @@ class PluginProductTable extends Doctrine_Table
 			->orderBy('p.is_featured DESC');
 	}
 	
+	/**
+	 * @return Doctrine_Query
+	 */
 	public function getFeaturedProductQuery()
 	{
 		return $this->createQuery('p')
 			->where('p.is_featured = ?', true);
+	}
+	
+	/**
+	 * @param Doctrine_Query $query
+	 * @return Doctrine_Query
+	 */
+	public function addWithImagesQuery($query = null)
+	{
+		if($query == null) $query = $this->createQuery('p');
+		
+		return $query->leftJoin('p.images i')
+			->addOrderBy('i.position ASC');
 	}
 	
 	/**
@@ -28,9 +43,20 @@ class PluginProductTable extends Doctrine_Table
 	 */
 	public function getRandomProductsWithLimit($limit)
 	{
-		return $this->createQuery('p')
-			->orderBy('RAND()')
-			->limit($limit)
+		$q = $this->createQuery('p');
+		
+		return $this->addRandomProductsWithLimitQuery($q, $limit)
 			->execute();
+	}
+	
+	/**
+	 * @param Doctrine_Query $q
+	 * @param int $limit
+	 * @return Doctrine_Query
+	 */
+	public function addRandomProductsWithLimitQuery($q, $limit)
+	{
+		return $q->orderBy('RAND()')
+			->limit($limit);
 	}
 }
