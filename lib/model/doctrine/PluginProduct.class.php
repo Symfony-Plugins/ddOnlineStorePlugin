@@ -21,4 +21,9 @@ abstract class PluginProduct extends BaseProduct
 	{
 		return ProductImageTable::getInstance()->getProductImagesInOrder($this->getId());
 	}
+	
+	public function getCategorySlug()
+	{
+		return $this->category->getSlug();
+	}
 }
