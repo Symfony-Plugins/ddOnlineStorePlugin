@@ -22,6 +22,8 @@ This plugin doesn't have strict dependencies, but needs the following to work:
 *   [sfJqueryReloadedPlugin](http://www.symfony-project.org/plugins/sfJqueryReloadedPlugin "sfJqueryReloadedPlugin").
 *   [sfJqueryTreeDoctrineManagerPlugin](http://www.symfony-project.org/plugins/sfJqueryTreeDoctrineManagerPlugin "sfJqueryTreeDoctrineManagerPlugin") (install only via repository to get the lastest version).
 *   [sfImageTransformPlugin](http://www.symfony-project.org/plugins/sfImageTransformPlugin "sfImageTransformPlugin").
+*   [csDoctrineActAsSortablePlugin](http://www.symfony-project.org/plugins/csDoctrineActAsSortablePlugin "csDoctrineActAsSortablePlugin").
+*   [sfDoctrineJCroppablePlugin](http://www.symfony-project.org/plugins/sfDoctrineJCroppablePlugin "sfDoctrineJCroppablePlugin") (install only via repository to get the lastest version).
 
 Also, we recommend use the catalog backend with [sfAdminDashPlugin](http://www.symfony-project.org/plugins/sfAdminDashPlugin "sfAdminDashPlugin") plugin.
 
@@ -56,6 +58,8 @@ You have two different ways to install this plugin:
               'sfJqueryReloadedPlugin',
               'sfJqueryTreeDoctrineManagerPlugin',
               'sfImageTransformPlugin',
+              'csDoctrineActAsSortablePlugin',
+              'sfDoctrineJCroppablePlugin',
               'ddOnlineStorePlugin'
             ));
           }
