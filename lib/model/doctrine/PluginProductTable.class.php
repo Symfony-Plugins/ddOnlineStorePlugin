@@ -59,4 +59,27 @@ class PluginProductTable extends Doctrine_Table
 		return $q->orderBy('RAND()')
 			->limit($limit);
 	}
+	
+ /**
+     * @return Doctrine_Query
+     */
+    public function getSortedProductsQuery()
+    {
+    	$q = $this->createQuery('p')
+    		->where('p.is_available = ?', true)
+    		->orderBy('p.id');
+    	
+    	return $this->addWithImagesQuery($q);
+    }
+    
+    /**
+     * @return Doctrine_Query
+     */
+    public function addFilterByCategoryQuery(Doctrine_Query $q, ProductCategory $category)
+    {
+    	$q = $this->getSortedProductsQuery()
+    		->addWhere('p.category_id = ?', $category->getId());
+    		
+    	return $q;
+    }
 }
