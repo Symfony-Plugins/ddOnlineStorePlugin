@@ -16,6 +16,7 @@ generator:
       actions: ~
       fields:  
         manage_images:     { label: "Images" }
+        manage_colors:     { label: "Colors" }
         capacity:          { help: "Fill this field in MB" }
       
       list:    

@@ -23,7 +23,7 @@ generator:
         object_actions:
           _edit:           ~
           manage_tree:     
-            label:         "Manage tree"
+            label:         "Manage subcategories"
             params:        { class: "manage_tree" }
             action:        "manageTree"
           _delete:         ~
@@ -39,7 +39,7 @@ generator:
         actions:
           _list:           ~
           _save:           ~
-          _save_and_add:   { label: "save and add another category" } 
+          _save_and_add:   { label: "Save and add another category" } 
           
       edit:    
         title:             "Edit '%%name%%' category"

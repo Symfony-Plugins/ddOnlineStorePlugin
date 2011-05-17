@@ -23,4 +23,16 @@ abstract class PluginProductCategory extends BaseProductCategory
 
 		return $parent['id'];
 	}
+	
+	/**
+	 * @param Boolean $deepSearch
+	 * @param Boolean $randomized
+	 * @param int $limit
+	 */
+	public function getAvailableProducts($deepSearch = false, $randomized = false, $limit = false)
+	{
+		$q = ProductTable::getInstance()->getProductsInCategoryQuery($this, $deepSearch, $randomized, $limit);
+		
+		return $q->execute();
+	}
 }
