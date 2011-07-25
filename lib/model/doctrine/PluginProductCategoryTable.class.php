@@ -53,15 +53,25 @@ class PluginProductCategoryTable extends Doctrine_Table
 	}
 	
 	/**
+	 * Return the query for all categories sorted except root
+	 * 
+	 * @return Doctrine_Query
+	 */
+	public function getAllCategoriesExceptRootQuery()
+	{
+		$q = $this->addSortedCategory($this->getTree()->getBaseQuery());
+		$q->andWhere($q->getRootAlias().'.lft <> ?', 1);
+		
+		return $q;
+	}
+	
+	/**
 	 * Return all categories sorted except root
 	 * 
 	 * @return Doctrine_Collection
 	 */
 	public function getAllCategoriesExceptRoot()
-	{
-		$q = $this->addSortedCategory($this->getTree()->getBaseQuery());
-		$q->andWhere($q->getRootAlias().'.lft <> ?', 1);
-		
-		return $q->execute();
+	{		
+		return $this->getAllCategoriesExceptRootQuery()->execute();
 	}
 }
