@@ -10,7 +10,7 @@
  */
 abstract class PluginProductCategoryForm extends BaseProductCategoryForm
 {
-	public function setup()
+	public function configure()
 	{
 		parent::setup();
 
